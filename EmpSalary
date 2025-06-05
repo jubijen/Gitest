@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+public class Salary {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter SALARY: ");
+        double salary = scanner.nextDouble();
+
+        System.out.println("Type of Employee: ");
+        System.out.println("1. Permanent");
+        System.out.println("2. Provisional");
+        System.out.println("3. Consultant");
+        System.out.println("4. Part-Time");
+        int choice = scanner.nextInt();
+
+        double tax = 0;
+        double sss = 100;
+        double hdmf = 200;
+        double philHealth = 150;
+
+        if (choice == 1) {
+            tax = 0.1 * salary;
+        } else if (choice == 2) {
+            if (salary <= 1000) {
+                tax = 0.03 * salary;
+            } else if (salary <= 1500) {
+                tax = 0.05 * salary;
+            } else if (salary <= 2000) {
+                tax = 0.08 * salary;
+            } else if (salary <= 5000) {
+                tax = 0.09 * salary;
+            } else {
+                tax = 0.10 * salary;
+            }
+        } else if (choice == 3) {
+            tax = 0.25 * salary;
+        } else if (choice == 4) {
+            tax = 500;
+        } else {
+            System.out.println("Invalid choice.");
+            return;
+        }
+
+        double deduction = sss + hdmf + philHealth;
+        double netPay = salary - (tax + deduction);
+
+        System.out.println("Tax: " + tax);
+        System.out.println("Deductions:");
+        System.out.println("- SSS: " + sss);
+        System.out.println("- HDMF: " + hdmf);
+        System.out.println("- PhilHealth: " + philHealth);
+        System.out.println("Net Pay: " + netPay);
+    }
+}
