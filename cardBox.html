@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Our Services</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: black;
+        color: red;
+    }
+
+    .services-section {
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    .services-title {
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 40px;
+        color: white;
+    }
+
+    .services-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .service-card {
+        background-color: #a19c9c;
+        border: 2px solid white;
+        border-radius: 10px;
+        width: 280px;
+        padding: 20px;
+        box-shadow: 0 0 10px whitesmoke;
+        transition: transform 0.3s;
+    }
+
+    .service-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .service-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: blue;
+    }
+
+    .service-text {
+        font-size: 16px;
+        color: white;
+        line-height: 1.5;
+    }
+</style>
+</head>
+
+<body>
+
+<section class="services-section">
+    <div class="services-title">Our Services</div>
+
+    <div class="services-container">
+
+        <div class="service-card">
+            <div class="service-title">Digital Marketing</div>
+            <div class="service-text">
+                We help businesses grow through social media marketing and online advertising.
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-title">IT Support</div>
+            <div class="service-text">
+                We provide troubleshooting, system maintenance, and computer repair support.
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-title">App Development</div>
+            <div class="service-text">
+               We develop mobile applications for Android and iOS platforms.
+            </div>
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>
